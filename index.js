@@ -1,9 +1,10 @@
 var abc = require("./classifiers/abc");
 var haiku = require("./classifiers/haiku");
+var tanka = require("./classifiers/tanka");
 
+var all = [abc, haiku, tanka]
 function detectPoetry(str) {
-  var poemTypes = [abc, haiku];
-  return poemTypes
+  return all
     .filter(function(type) {
       return type(str);
     })
@@ -12,6 +13,8 @@ function detectPoetry(str) {
     });
 }
 
-exports.detectPoetry;
+exports.all = all;
+exports.detectPoetry = detectPoetry;
 exports.abc = abc;
 exports.haiku = haiku;
+exports.tanka = tanka;

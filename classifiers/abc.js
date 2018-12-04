@@ -6,8 +6,8 @@ function abc(str) {
     .trim()
     .toLowerCase()
     .split(/[\n\r]+/)
-    .every(function(stanza) {
-      return stanza.trim().charCodeAt(0) === char++;
+    .every(function(lines) {
+      return lines.trim().charCodeAt(0) === char++;
     });
 }
 

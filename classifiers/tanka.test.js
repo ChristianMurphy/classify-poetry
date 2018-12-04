@@ -1,12 +1,14 @@
 import test from "ava";
-import abc from "./haiku";
+import abc from "./tanka";
 
-test("haiku poem", t => {
+test("taka poem", t => {
   t.true(
     abc(`
-      detect a haiku
-      pleased to do, says algorithm
+      detect a tanka
+      detector algorithm
       thanks algorithm
+      nicely done detector, for
+      another tanka poem found
     `)
   );
 });
