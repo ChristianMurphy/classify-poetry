@@ -1,9 +1,9 @@
 import test from "ava";
-import abc from "./tanka";
+import tanka from "./tanka";
 
 test("taka poem", t => {
   t.true(
-    abc(`
+    tanka(`
       detect a tanka
       detector algorithm
       thanks algorithm
@@ -15,7 +15,7 @@ test("taka poem", t => {
 
 test("not haiku poem", t => {
   t.false(
-    abc(`
+    tanka(`
       random
       text
       for testing

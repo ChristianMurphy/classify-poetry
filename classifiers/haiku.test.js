@@ -1,9 +1,9 @@
 import test from "ava";
-import abc from "./haiku";
+import haiku from "./haiku";
 
 test("haiku poem", t => {
   t.true(
-    abc(`
+    haiku(`
       detect a haiku
       pleased to do, says algorithm
       thanks algorithm
@@ -13,7 +13,7 @@ test("haiku poem", t => {
 
 test("not haiku poem", t => {
   t.false(
-    abc(`
+    haiku(`
       random
       text
       for testing

@@ -1,18 +1,22 @@
 {
-  "name": "detect-poetry",
+  "name": "classify-poetry",
   "version": "0.0.0",
-  "description": "recognize poetry in a given text excerpt",
+  "description": "recognize type poetry in a given text excerpt",
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "format": "prettier --write '*.js' 'classifiers/*.js'"
+    "format": "prettier --write '*.{js,md}' 'classifiers/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristianMurphy/detect-poetry.git"
+    "url": "git+https://github.com/ChristianMurphy/classify-poetry.git"
   },
   "keywords": [
     "poetry",
+    "poem",
+    "verse",
+    "sonnet",
+    "haiku",
     "classification",
     "detect",
     "recognize",
@@ -24,9 +28,9 @@
   "author": "Christian Murphy <christian.murphy.42@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChristianMurphy/detect-poetry/issues"
+    "url": "https://github.com/ChristianMurphy/classify-poetry/issues"
   },
-  "homepage": "https://github.com/ChristianMurphy/detect-poetry#readme",
+  "homepage": "https://github.com/ChristianMurphy/classify-poetry#readme",
   "devDependencies": {
     "ava": "^1.0.0-rc.2",
     "prettier": "^1.15.3"
