@@ -1,0 +1,37 @@
+{
+  "name": "detect-poetry",
+  "version": "0.0.0",
+  "description": "recognize poetry in a given text excerpt",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "format": "prettier --write '*.js' 'classifiers/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianMurphy/detect-poetry.git"
+  },
+  "keywords": [
+    "poetry",
+    "classification",
+    "detect",
+    "recognize",
+    "analyze",
+    "natural",
+    "language",
+    "processing"
+  ],
+  "author": "Christian Murphy <christian.murphy.42@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristianMurphy/detect-poetry/issues"
+  },
+  "homepage": "https://github.com/ChristianMurphy/detect-poetry#readme",
+  "devDependencies": {
+    "ava": "^1.0.0-rc.2",
+    "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "syllable": "^3.2.0"
+  }
+}
