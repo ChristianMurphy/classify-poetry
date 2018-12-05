@@ -1,12 +1,10 @@
 "use strict";
 
 var syllables = require("syllable");
+var parseLines = require('../utils/parseLines');
 
 function haiku(str) {
-  var lines = str
-    .trim()
-    .toLowerCase()
-    .split(/[\n\r]+/);
+  var lines = parseLines(str);
   return (
     lines.length === 3 &&
     syllables(lines[0]) === 5 &&

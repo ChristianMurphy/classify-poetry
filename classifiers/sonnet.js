@@ -1,34 +1,16 @@
 "use strict";
 
-var words = require("cmu-pronouncing-dictionary");
+var parseLines = require('../utils/parseLines');
+var lookupSounds = require('../utils/lookupSounds');
 
 function sonnet(str) {
-  var lines = str
-    .trim()
-    .toLowerCase()
-    .split(/[\n\r]+/);
+  var lines = parseLines(str);
 
   if (lines.length !== 14) {
     return false;
   }
 
-  var sounds = lines
-    .map(function(line) {
-      // final word and punctuation
-      return line.match(/[^\s]+$/)[0];
-    })
-    .map(function(wordandPuncutation) {
-      // just the word
-      return wordandPuncutation.match(/[\w]+/)[0];
-    })
-    .map(function(word) {
-      // lookup in cmu pronunciation dictionary
-      return words[word.toLowerCase()];
-    })
-    .map(function(sounds) {
-      // final sound of pronunciation
-      return sounds.split(" ").reverse()[0];
-    });
+  var sounds = lookupSounds(lines);
 
   // ABBA ABBA CDE CDE
   // or
