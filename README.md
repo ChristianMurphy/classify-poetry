@@ -1,5 +1,6 @@
 # classify-poetry
 
+[![NPM Version](https://img.shields.io/npm/v/classify-poetry.svg)](https://www.npmjs.com/package/classify-poetry)
 [![Build Status](https://travis-ci.com/ChristianMurphy/classify-poetry.svg?branch=master)](https://travis-ci.com/ChristianMurphy/classify-poetry)
 
 > recognize the type of poetry in a given excerpt
