@@ -1,16 +1,19 @@
 "use strict";
 
-var syllables = require("syllable");
-var parseLines = require('../utils/parseLines');
+var lookupSyllables = require("../utils/lookupSyllables");
+var parseLines = require("../utils/parseLines");
 
 function haiku(str) {
   var lines = parseLines(str);
-  return (
-    lines.length === 3 &&
-    syllables(lines[0]) === 5 &&
-    syllables(lines[1]) === 8 &&
-    syllables(lines[2]) === 5
-  );
+
+  if (lines.length !== 3) {
+    return false;
+  }
+
+  var syllables = lookupSyllables(lines);
+
+  // 5 7 5
+  return syllables[0] === 5 && syllables[1] === 8 && syllables[2] === 5;
 }
 
 module.exports = haiku;
