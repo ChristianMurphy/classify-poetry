@@ -1,5 +1,7 @@
 # classify-poetry
 
+[![Build Status](https://travis-ci.com/ChristianMurphy/classify-poetry.svg?branch=master)](https://travis-ci.com/ChristianMurphy/classify-poetry)
+
 > recognize the type of poetry in a given excerpt
 
 ## Installation
