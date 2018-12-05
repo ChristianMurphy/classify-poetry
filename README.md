@@ -60,6 +60,15 @@ limerick(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Limerick_(poetry)>
 
+#### Quatrain
+
+```js
+var quatrain = require("classify-poetry").quatrain;
+quatrain(sampleText); // => true or false
+```
+
+<https://en.wikipedia.org/wiki/Quatrain>
+
 #### Sonnet
 
 ```js
