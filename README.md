@@ -33,6 +33,15 @@ abc(sampleText); // => true or false
 
 <http://www.poeticterminology.net/01-abc-poem.htm>
 
+#### Couplet
+
+```js
+var couplet = require("classify-poetry").couplet;
+couplet(sampleText); // => true or false
+```
+
+<https://en.wikipedia.org/wiki/Couplet>
+
 #### Haiku
 
 ```js
@@ -42,7 +51,7 @@ haiku(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Haiku_in_English>
 
-### Limerick
+#### Limerick
 
 ```js
 var limerick = require("classify-poetry").limerick;
@@ -51,7 +60,7 @@ limerick(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Limerick_(poetry)>
 
-### Sonnet
+#### Sonnet
 
 ```js
 var sonnet = require("classify-poetry").sonnet;
@@ -60,7 +69,7 @@ sonnet(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Sonnet>
 
-### Tanka
+#### Tanka
 
 ```js
 var tanka = require("classify-poetry").tanka;
@@ -69,7 +78,7 @@ tanka(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Tanka>
 
-### Terza Rima
+#### Terza Rima
 
 ```js
 var terzaRima = require("classify-poetry").terzaRima;

@@ -1,4 +1,5 @@
 var abc = require("./classifiers/abc");
+var couplet = require("./classifiers/couplet");
 var haiku = require("./classifiers/haiku");
 var limerick = require("./classifiers/limerick");
 var sonnet = require("./classifiers/sonnet");
@@ -20,6 +21,7 @@ function detectPoetry(str) {
 exports.all = all;
 exports.detectPoetry = detectPoetry;
 exports.abc = abc;
+exports.couplet = couplet;
 exports.haiku = haiku;
 exports.limerick = limerick;
 exports.sonnet = sonnet;
