@@ -42,6 +42,15 @@ haiku(sampleText); // => true or false
 
 <https://en.wikipedia.org/wiki/Haiku_in_English>
 
+### Limerick
+
+```js
+var limerick = require("classify-poetry").limerick;
+limerick(sampleText); // => true or false
+```
+
+<https://en.wikipedia.org/wiki/Limerick_(poetry)>
+
 ### Sonnet
 
 ```js
