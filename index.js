@@ -9,18 +9,18 @@ var terzaRima = require("./classifiers/terzaRima");
 
 var all = [abc, couplet, haiku, limerick, quatrain, sonnet, tanka, terzaRima];
 
-function detectPoetry(str) {
+function classifyPoetry(str) {
   return all
-    .filter(function(type) {
+    .filter(function (type) {
       return type(str);
     })
-    .map(function(type) {
+    .map(function (type) {
       return type.name;
     });
 }
 
 exports.all = all;
-exports.detectPoetry = detectPoetry;
+exports.classifyPoetry = classifyPoetry;
 exports.abc = abc;
 exports.couplet = couplet;
 exports.haiku = haiku;
