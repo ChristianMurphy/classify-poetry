@@ -14,13 +14,13 @@ function haiku(str) {
   var sounds = lookupSounds(lines);
 
   return sounds.every(function (sound, index) {
-      // skip odd lines
-      if (index % 2 === 1) {
-        return true
-      }
+    // skip odd lines
+    if (index % 2 === 1) {
+      return true;
+    }
 
-      // paired lines should rhyme
-      return sound === sounds[index + 1];
+    // paired lines should rhyme
+    return sound === sounds[index + 1];
   });
 }
 

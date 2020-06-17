@@ -1,9 +1,9 @@
- import test from "ava";
- import sonnet from "./sonnet";
+const test = require("ava");
+const sonnet = require("./sonnet");
 
- test("sonnet poem", t => {
-   t.true(
-     sonnet(`
+test("sonnet poem", (t) => {
+  t.true(
+    sonnet(`
        When I consider how my light is spent
         Ere half my days, in this dark world and wide,
         And that one talent which is death to hide,
@@ -19,15 +19,15 @@
         And post o'er land and ocean without rest;
         They also serve who only stand and wait."
      `) // On His Blindness, by Milton
-   );
- });
+  );
+});
 
- test("not sonnet poem", t => {
-   t.false(
-     sonnet(`
+test("not sonnet poem", (t) => {
+  t.false(
+    sonnet(`
        random
        text
        for testing
      `)
-   );
- });
+  );
+});

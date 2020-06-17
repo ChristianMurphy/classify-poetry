@@ -1,7 +1,7 @@
-import test from "ava";
-import couplet from "./couplet";
+const test = require("ava");
+const couplet = require("./couplet");
 
-test("couple poem 1", t => {
+test("couple poem 1", (t) => {
   t.true(
     couplet(`
       True wit is nature to advantage dressed;
@@ -10,7 +10,7 @@ test("couple poem 1", t => {
   );
 });
 
-test("couple poem 2", t => {
+test("couple poem 2", (t) => {
   t.true(
     couplet(`
       Whether or not we find what we are seeking
@@ -19,7 +19,7 @@ test("couple poem 2", t => {
   );
 });
 
-test("not couple poem", t => {
+test("not couple poem", (t) => {
   t.false(
     couplet(`
       random

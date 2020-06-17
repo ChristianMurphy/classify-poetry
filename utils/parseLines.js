@@ -3,4 +3,4 @@ module.exports = function (str) {
     .trim()
     .toLowerCase()
     .split(/[\n\r]+/);
-}
+};

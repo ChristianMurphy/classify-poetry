@@ -1,7 +1,7 @@
-import test from "ava";
-import tanka from "./tanka";
+const test = require("ava");
+const tanka = require("./tanka");
 
-test("taka poem", t => {
+test("taka poem", (t) => {
   t.true(
     tanka(`
       detect a tanka
@@ -13,7 +13,7 @@ test("taka poem", t => {
   );
 });
 
-test("not haiku poem", t => {
+test("not haiku poem", (t) => {
   t.false(
     tanka(`
       random

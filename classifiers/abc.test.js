@@ -1,7 +1,7 @@
-import test from "ava";
-import abc from "./abc";
+const test = require("ava");
+const abc = require("./abc");
 
-test("abc poem", t => {
+test("abc poem", (t) => {
   t.true(
     abc(`
       a poem
@@ -11,7 +11,7 @@ test("abc poem", t => {
   );
 });
 
-test("not abc poem", t => {
+test("not abc poem", (t) => {
   t.false(
     abc(`
       random

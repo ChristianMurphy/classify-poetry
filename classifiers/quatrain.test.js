@@ -1,7 +1,7 @@
-import test from "ava";
-import quatrain from "./quatrain";
+const test = require("ava");
+const quatrain = require("./quatrain");
 
-test("quatrain poem 1", t => {
+test("quatrain poem 1", (t) => {
   t.true(
     quatrain(`
       The curfew tolls the knell of parting day,
@@ -12,7 +12,7 @@ test("quatrain poem 1", t => {
   );
 });
 
-test("quatrain poem 2", t => {
+test("quatrain poem 2", (t) => {
   t.true(
     quatrain(`
       Come, fill the Cup, and in the fire of Spring
@@ -23,7 +23,7 @@ test("quatrain poem 2", t => {
   );
 });
 
-test("not quatrain poem", t => {
+test("not quatrain poem", (t) => {
   t.false(
     quatrain(`
       random

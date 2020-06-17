@@ -1,7 +1,7 @@
-import test from "ava";
-import terzaRima from "./terzaRima";
+const test = require("ava");
+const terzaRima = require("./terzaRima");
 
-test("terza rima poem", t => {
+test("terza rima poem", (t) => {
   t.true(
     terzaRima(`
       I have been one acquainted with the night.
@@ -26,7 +26,7 @@ test("terza rima poem", t => {
   );
 });
 
-test("not terza rima poem", t => {
+test("not terza rima poem", (t) => {
   t.false(
     terzaRima(`
       random

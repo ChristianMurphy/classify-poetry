@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/ChristianMurphy/classify-poetry#readme",
   "devDependencies": {
-    "ava": "^1.0.0-rc.2",
-    "prettier": "^1.15.3"
+    "ava": "^3.0.0",
+    "prettier": "^2.0.3"
   },
   "dependencies": {
-    "cmu-pronouncing-dictionary": "^1.0.3",
-    "syllable": "^3.2.0"
+    "cmu-pronouncing-dictionary": "^2.0.0",
+    "syllable": "^4.0.0"
   }
 }

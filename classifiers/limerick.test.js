@@ -1,7 +1,7 @@
-import test from "ava";
-import limerick from "./limerick";
+const test = require("ava");
+const limerick = require("./limerick");
 
-test("limerick poem", t => {
+test("limerick poem", (t) => {
   t.true(
     limerick(`
       The limerick packs laughs anatomical
@@ -13,7 +13,7 @@ test("limerick poem", t => {
   );
 });
 
-test("not limerick poem", t => {
+test("not limerick poem", (t) => {
   t.false(
     limerick(`
       random

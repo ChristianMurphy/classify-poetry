@@ -1,7 +1,7 @@
 "use strict";
 
-var lookupSounds = require('../utils/lookupSounds');
-var parseLines = require('../utils/parseLines');
+var lookupSounds = require("../utils/lookupSounds");
+var parseLines = require("../utils/parseLines");
 
 function terzaRima(str) {
   var lines = parseLines(str);
