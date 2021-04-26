@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "cmu-pronouncing-dictionary": "^2.0.0",
-    "syllable": "^4.0.0"
+    "syllable": "^5.0.0"
   }
 }
