@@ -1,6 +1,11 @@
-var syllable = require("syllable");
+import {syllable} from "syllable"
 
-module.exports = function (lines) {
+/**
+ * 
+ * @param {string[]} lines 
+ * @returns {number[]}
+ */
+export function lookupSyllables (lines) {
   return lines.map(function (line) {
     return syllable(line);
   });

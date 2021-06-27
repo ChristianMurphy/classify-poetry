@@ -1,16 +1,19 @@
-"use strict";
+import { lookupSounds } from "../utils/lookupSounds.js";
+import { parseLines } from "../utils/parseLines.js";
 
-var lookupSounds = require("../utils/lookupSounds");
-var parseLines = require("../utils/parseLines");
-
-function sonnet(str) {
-  var lines = parseLines(str);
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function sonnet(str) {
+  const lines = parseLines(str);
 
   if (lines.length !== 14) {
     return false;
   }
 
-  var sounds = lookupSounds(lines);
+  const sounds = lookupSounds(lines);
 
   // ABBA ABBA CDE CDE
   // or
@@ -27,5 +30,3 @@ function sonnet(str) {
     sounds[10] === sounds[13] // C or E
   );
 }
-
-module.exports = sonnet;

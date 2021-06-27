@@ -1,17 +1,20 @@
-"use strict";
+import { lookupSounds } from "../utils/lookupSounds.js";
+import { parseLines } from "../utils/parseLines.js";
 
-var lookupSounds = require("../utils/lookupSounds");
-var parseLines = require("../utils/parseLines");
-
-function sonnet(str) {
-  var lines = parseLines(str);
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function quatrain(str) {
+  const lines = parseLines(str);
 
   if (lines.length !== 4) {
     return false;
   }
 
   // A and B can appear in any order
-  var sounds = lookupSounds(lines).sort();
+  const sounds = lookupSounds(lines).sort();
 
   return (
     sounds[0] === sounds[1] ||
@@ -19,5 +22,3 @@ function sonnet(str) {
     sounds[2] === sounds[3]
   );
 }
-
-module.exports = sonnet;

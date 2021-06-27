@@ -1,17 +1,20 @@
-"use strict";
+import { lookupSounds } from "../utils/lookupSounds.js";
+import { parseLines } from "../utils/parseLines.js";
 
-var lookupSounds = require("../utils/lookupSounds");
-var parseLines = require("../utils/parseLines");
-
-function haiku(str) {
-  var lines = parseLines(str);
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function couplet(str) {
+  const lines = parseLines(str);
 
   // odd number of lines
   if (lines.length % 2 === 1) {
     return false;
   }
 
-  var sounds = lookupSounds(lines);
+  const sounds = lookupSounds(lines);
 
   return sounds.every(function (sound, index) {
     // skip odd lines
@@ -23,5 +26,3 @@ function haiku(str) {
     return sound === sounds[index + 1];
   });
 }
-
-module.exports = haiku;

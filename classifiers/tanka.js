@@ -1,16 +1,19 @@
-"use strict";
+import { parseLines } from "../utils/parseLines.js";
+import { lookupSyllables } from "../utils/lookupSyllables.js";
 
-var lookupSyllables = require("../utils/lookupSyllables");
-var parseLines = require("../utils/parseLines");
-
-function tanka(str) {
-  var lines = parseLines(str);
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function tanka(str) {
+  const lines = parseLines(str);
 
   if (lines.length !== 5) {
     return false;
   }
 
-  var syllables = lookupSyllables(lines);
+  const syllables = lookupSyllables(lines);
 
   // 5 7 5 7 7
   return (
@@ -21,5 +24,3 @@ function tanka(str) {
     syllables[4] === 7
   );
 }
-
-module.exports = tanka;

@@ -1,8 +1,9 @@
-const test = require("ava");
-const sonnet = require("./sonnet");
+import { test } from "uvu";
+import { is } from "uvu/assert";
+import { sonnet } from "./sonnet.js";
 
-test("sonnet poem", (t) => {
-  t.true(
+test("sonnet poem", () => {
+  is(
     sonnet(`
        When I consider how my light is spent
         Ere half my days, in this dark world and wide,
@@ -18,16 +19,20 @@ test("sonnet poem", (t) => {
        Is Kingly. Thousands at his bidding speed
         And post o'er land and ocean without rest;
         They also serve who only stand and wait."
-     `) // On His Blindness, by Milton
+     `), // On His Blindness, by Milton
+    true
   );
 });
 
-test("not sonnet poem", (t) => {
-  t.false(
+test("not sonnet poem", () => {
+  is(
     sonnet(`
        random
        text
        for testing
-     `)
+     `),
+    false
   );
 });
+
+test.run();

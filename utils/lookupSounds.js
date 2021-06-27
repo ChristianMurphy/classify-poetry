@@ -1,18 +1,23 @@
-var words = require("cmu-pronouncing-dictionary");
+import {dictionary} from "cmu-pronouncing-dictionary"
 
-module.exports = function (lines) {
+/**
+ * 
+ * @param {string[]} lines 
+ * @returns {string[]}
+ */
+export function lookupSounds (lines) {
   return lines
     .map(function (line) {
       // final word and punctuation
       return line.match(/[^\s]+$/)[0];
     })
-    .map(function (wordandPuncutation) {
+    .map(function (wordAndPunctuation) {
       // just the word
-      return wordandPuncutation.match(/[\w]+/)[0];
+      return wordAndPunctuation.match(/[\w]+/)[0];
     })
     .map(function (word) {
       // lookup in cmu pronunciation dictionary
-      return words[word.toLowerCase()];
+      return dictionary[word.toLowerCase()];
     })
     .map(function (sounds) {
       // final sound of pronunciation

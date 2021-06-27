@@ -1,9 +1,12 @@
-"use strict";
+import { lookupSounds } from "../utils/lookupSounds.js";
+import { parseLines } from "../utils/parseLines.js";
 
-var lookupSounds = require("../utils/lookupSounds");
-var parseLines = require("../utils/parseLines");
-
-function terzaRima(str) {
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function terzaRima(str) {
   var lines = parseLines(str);
 
   if (lines.length < 12) {
@@ -23,5 +26,3 @@ function terzaRima(str) {
     sounds[7] === sounds[11] // D
   );
 }
-
-module.exports = terzaRima;

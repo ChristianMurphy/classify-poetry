@@ -1,22 +1,27 @@
-const test = require("ava");
-const haiku = require("./haiku");
+import { test } from "uvu";
+import { is } from "uvu/assert";
+import { haiku } from "./haiku.js";
 
-test("haiku poem", (t) => {
-  t.true(
+test("haiku poem", () => {
+  is(
     haiku(`
       detect a haiku
       pleased to do, says algorithm
       thanks algorithm
-    `)
+    `),
+    true
   );
 });
 
-test("not haiku poem", (t) => {
-  t.false(
+test("not haiku poem", () => {
+  is(
     haiku(`
       random
       text
       for testing
-    `)
+    `),
+    false
   );
 });
+
+test.run();

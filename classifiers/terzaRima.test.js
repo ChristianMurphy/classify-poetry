@@ -1,8 +1,9 @@
-const test = require("ava");
-const terzaRima = require("./terzaRima");
+import { test } from "uvu";
+import { is } from "uvu/assert";
+import { terzaRima } from "./terzaRima.js";
 
-test("terza rima poem", (t) => {
-  t.true(
+test("terza rima poem", () => {
+  is(
     terzaRima(`
       I have been one acquainted with the night.
       I have walked out in rain—and back in rain.
@@ -22,16 +23,20 @@ test("terza rima poem", (t) => {
 
       Proclaimed the time was neither wrong nor right.
       I have been one acquainted with the night.
-    `) // Acquainted with the Night, by Robert Frost
+    `), // Acquainted with the Night, by Robert Frost
+    true
   );
 });
 
-test("not terza rima poem", (t) => {
-  t.false(
+test("not terza rima poem", () => {
+  is(
     terzaRima(`
       random
       text
       for testing
-    `)
+    `),
+    false
   );
 });
+
+test.run();
