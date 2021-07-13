@@ -51,6 +51,9 @@
     "cmu-pronouncing-dictionary": "^3.0.0",
     "syllable": "^5.0.0"
   },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "typeCoverage": {
     "atLeast": 100,
     "detail": true,
