@@ -4,6 +4,7 @@
   "description": "recognize type poetry in a given text excerpt",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "rimraf \"*.d.ts\" \"classifiers/*.d.ts\" \"utils/*.d.ts\" && uvu classifiers && tsc && type-coverage",
     "format": "prettier --write \"*.{js,md}\" \"classifiers/*.js\"",
@@ -13,6 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/ChristianMurphy/classify-poetry.git"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "utils/",
+    "classifiers/"
+  ],
   "keywords": [
     "poetry",
     "poem",
