@@ -7,13 +7,13 @@ import { parseLines } from "../utils/parseLines.js";
  * @returns {boolean}
  */
 export function terzaRima(str) {
-  var lines = parseLines(str);
+  const lines = parseLines(str);
 
   if (lines.length < 12) {
     return false;
   }
 
-  var sounds = lookupSounds(lines);
+  const sounds = lookupSounds(lines);
 
   // ABA BCB CDC DED
   return (
