@@ -1,9 +1,12 @@
-"use strict";
+import { parseLines } from "../utils/parseLines.js";
 
-var parseLines = require("../utils/parseLines");
-
-function abc(str) {
-  var char = 97; // 'a'
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function abc(str) {
+  let char = 97; // 'a'
   return (
     parseLines(str)
       // abc...
@@ -12,5 +15,3 @@ function abc(str) {
       })
   );
 }
-
-module.exports = abc;

@@ -7,6 +7,9 @@
 
 ## Installation
 
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
+Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
+
 ```sh
 npm install classify-poetry
 ```
@@ -16,8 +19,8 @@ npm install classify-poetry
 ### Classify Poetry
 
 ```js
-var classifyPoetry = require("classify-poetry").classifyPoetry;
-var types = classifyPoetry(
+import { classifyPoetry } from "classify-poetry";
+const types = classifyPoetry(
   "detect a haiku \n pleased to do, says algorithm \n thanks algorithm"
 );
 console.log(types); // ["haiku"]
@@ -28,7 +31,7 @@ console.log(types); // ["haiku"]
 #### ABC
 
 ```js
-var abc = require("classify-poetry").abc;
+import { abc } from "classify-poetry";
 abc(sampleText); // => true or false
 ```
 
@@ -37,7 +40,7 @@ abc(sampleText); // => true or false
 #### Couplet
 
 ```js
-var couplet = require("classify-poetry").couplet;
+import { couplet } from "classify-poetry";
 couplet(sampleText); // => true or false
 ```
 
@@ -46,7 +49,7 @@ couplet(sampleText); // => true or false
 #### Haiku
 
 ```js
-var haiku = require("classify-poetry").haiku;
+import { haiku } from "classify-poetry";
 haiku(sampleText); // => true or false
 ```
 
@@ -55,7 +58,7 @@ haiku(sampleText); // => true or false
 #### Limerick
 
 ```js
-var limerick = require("classify-poetry").limerick;
+import { limerick } from "classify-poetry";
 limerick(sampleText); // => true or false
 ```
 
@@ -64,7 +67,7 @@ limerick(sampleText); // => true or false
 #### Quatrain
 
 ```js
-var quatrain = require("classify-poetry").quatrain;
+import { quatrain } from "classify-poetry";
 quatrain(sampleText); // => true or false
 ```
 
@@ -73,7 +76,7 @@ quatrain(sampleText); // => true or false
 #### Sonnet
 
 ```js
-var sonnet = require("classify-poetry").sonnet;
+import { sonnet } from "classify-poetry";
 sonnet(sampleText); // => true or false
 ```
 
@@ -82,7 +85,7 @@ sonnet(sampleText); // => true or false
 #### Tanka
 
 ```js
-var tanka = require("classify-poetry").tanka;
+import { tanka } from "classify-poetry";
 tanka(sampleText); // => true or false
 ```
 
@@ -91,7 +94,7 @@ tanka(sampleText); // => true or false
 #### Terza Rima
 
 ```js
-var terzaRima = require("classify-poetry").terzaRima;
+import { terzaRima } from "classify-poetry";
 terzaRima(sampleText); // => true or false
 ```
 

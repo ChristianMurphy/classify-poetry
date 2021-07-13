@@ -1,16 +1,19 @@
-"use strict";
+import { lookupSounds } from "../utils/lookupSounds.js";
+import { parseLines } from "../utils/parseLines.js";
 
-var lookupSounds = require("../utils/lookupSounds");
-var parseLines = require("../utils/parseLines");
-
-function terzaRima(str) {
-  var lines = parseLines(str);
+/**
+ *
+ * @param {string} str
+ * @returns {boolean}
+ */
+export function limerick(str) {
+  const lines = parseLines(str);
 
   if (lines.length !== 5) {
     return false;
   }
 
-  var sounds = lookupSounds(lines);
+  const sounds = lookupSounds(lines);
 
   // AABBA
   return (
@@ -19,5 +22,3 @@ function terzaRima(str) {
     sounds[2] === sounds[3] // B
   );
 }
-
-module.exports = terzaRima;
