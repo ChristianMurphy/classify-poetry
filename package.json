@@ -1,6 +1,6 @@
 {
   "name": "classify-poetry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "recognize type poetry in a given text excerpt",
   "type": "module",
   "main": "index.js",
