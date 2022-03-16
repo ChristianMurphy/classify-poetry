@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/ChristianMurphy/classify-poetry#readme",
   "devDependencies": {
-    "prettier": "~2.5.0",
+    "prettier": "~2.6.0",
     "rimraf": "^3.0.2",
     "type-coverage": "^2.0.0",
     "typescript": "~4.6.0",
