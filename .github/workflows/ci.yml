@@ -12,6 +12,10 @@ jobs:
       matrix:
         platform: [ubuntu-latest, windows-latest, macos-latest]
         node-version: [14, 16, 18]
+        exclude:
+          # permission issue with updating npm
+          - platform: windows-latest
+            node-version: 14
 
     name: '${{ matrix.platform }}: node.js ${{ matrix.node-version }}'
 
