@@ -1,5 +1,5 @@
 {
-  "include": ["*.js", "lib/**/*.js"],
+  "include": ["*.js", "lib/**/*.js", "utils/**/*.js"],
   "compilerOptions": {
     "checkJs": true,
     "declaration": true,

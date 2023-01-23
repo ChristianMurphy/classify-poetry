@@ -6,7 +6,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node --test && tsc --clean && type-coverage",
+    "test": "node --test && tsc --build --clean && tsc --build && type-coverage",
     "format": "prettier --write \"*.{js,md}\" \"classifiers/*.js\"",
     "prepublishOnly": "npm run test"
   },
