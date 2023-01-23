@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { couplet } from "./couplet.js";
 
 test("couple poem 1", () => {
-  is(
+  equal(
     couplet(`
       True wit is nature to advantage dressed;
       What oft was thought, but ne'er so well expressed.."
@@ -13,7 +13,7 @@ test("couple poem 1", () => {
 });
 
 test("couple poem 2", () => {
-  is(
+  equal(
     couplet(`
       Whether or not we find what we are seeking
       Is idle, biologically speaking.
@@ -23,7 +23,7 @@ test("couple poem 2", () => {
 });
 
 test("not couple poem", () => {
-  is(
+  equal(
     couplet(`
       random
       text
@@ -32,5 +32,3 @@ test("not couple poem", () => {
     false
   );
 });
-
-test.run();

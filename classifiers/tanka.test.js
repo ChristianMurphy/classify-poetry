@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { tanka } from "./tanka.js";
 
 test("taka poem", () => {
-  is(
+  equal(
     tanka(`
       detect a tanka
       detector algorithm
@@ -16,7 +16,7 @@ test("taka poem", () => {
 });
 
 test("not haiku poem", () => {
-  is(
+  equal(
     tanka(`
       random
       text
@@ -25,5 +25,3 @@ test("not haiku poem", () => {
     false
   );
 });
-
-test.run();

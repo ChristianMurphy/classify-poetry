@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { terzaRima } from "./terzaRima.js";
 
 test("terza rima poem", () => {
-  is(
+  equal(
     terzaRima(`
       I have been one acquainted with the night.
       I have walked out in rain—and back in rain.
@@ -29,7 +29,7 @@ test("terza rima poem", () => {
 });
 
 test("not terza rima poem", () => {
-  is(
+  equal(
     terzaRima(`
       random
       text
@@ -38,5 +38,3 @@ test("not terza rima poem", () => {
     false
   );
 });
-
-test.run();
