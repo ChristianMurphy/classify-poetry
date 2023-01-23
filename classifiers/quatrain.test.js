@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { quatrain } from "./quatrain.js";
 
 test("quatrain poem 1", () => {
-  is(
+  equal(
     quatrain(`
       The curfew tolls the knell of parting day,
       The lowing herd wind slowly o'er the lea,
@@ -15,7 +15,7 @@ test("quatrain poem 1", () => {
 });
 
 test("quatrain poem 2", () => {
-  is(
+  equal(
     quatrain(`
       Come, fill the Cup, and in the fire of Spring
       Your Winter garment of Repentance fling:
@@ -27,7 +27,7 @@ test("quatrain poem 2", () => {
 });
 
 test("not quatrain poem", () => {
-  is(
+  equal(
     quatrain(`
       random
       text
@@ -36,5 +36,3 @@ test("not quatrain poem", () => {
     false
   );
 });
-
-test.run();

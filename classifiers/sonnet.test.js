@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { sonnet } from "./sonnet.js";
 
 test("sonnet poem", () => {
-  is(
+  equal(
     sonnet(`
        When I consider how my light is spent
         Ere half my days, in this dark world and wide,
@@ -25,7 +25,7 @@ test("sonnet poem", () => {
 });
 
 test("not sonnet poem", () => {
-  is(
+  equal(
     sonnet(`
        random
        text
@@ -34,5 +34,3 @@ test("not sonnet poem", () => {
     false
   );
 });
-
-test.run();

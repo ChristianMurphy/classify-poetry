@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { abc } from "./abc.js";
 
 test("abc poem", () => {
-  is(
+  equal(
     abc(`
       a poem
       becoming a test
@@ -14,7 +14,7 @@ test("abc poem", () => {
 });
 
 test("not abc poem", () => {
-  is(
+  equal(
     abc(`
       random
       text
@@ -23,5 +23,3 @@ test("not abc poem", () => {
     false
   );
 });
-
-test.run();

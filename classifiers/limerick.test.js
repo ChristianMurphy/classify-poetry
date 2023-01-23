@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { limerick } from "./limerick.js";
 
 test("limerick poem", () => {
-  is(
+  equal(
     limerick(`
       The limerick packs laughs anatomical
       Into space that is quite economical.
@@ -16,7 +16,7 @@ test("limerick poem", () => {
 });
 
 test("not limerick poem", () => {
-  is(
+  equal(
     limerick(`
       random
       text
@@ -25,5 +25,3 @@ test("not limerick poem", () => {
     false
   );
 });
-
-test.run();

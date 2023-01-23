@@ -1,9 +1,9 @@
-import { test } from "uvu";
-import { is } from "uvu/assert";
+import { test } from "node:test";
+import { equal } from "node:assert/strict";
 import { haiku } from "./haiku.js";
 
 test("haiku poem", () => {
-  is(
+  equal(
     haiku(`
       detect a haiku
       pleased to do, says algorithm
@@ -14,7 +14,7 @@ test("haiku poem", () => {
 });
 
 test("not haiku poem", () => {
-  is(
+  equal(
     haiku(`
       random
       text
@@ -23,5 +23,3 @@ test("not haiku poem", () => {
     false
   );
 });
-
-test.run();
